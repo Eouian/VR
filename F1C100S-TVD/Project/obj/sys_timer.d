@@ -1,0 +1,9 @@
+.\obj\sys_timer.o: ..\Driver\Source\sys_timer.c
+.\obj\sys_timer.o: ..\Driver\Include\sys_timer.h
+.\obj\sys_timer.o: ..\Driver\Include\sys_types.h
+.\obj\sys_timer.o: ..\Driver\Include\sys_io.h
+.\obj\sys_timer.o: ..\Driver\Include\sys_interrupt.h
+.\obj\sys_timer.o: ..\Driver\Include\sys_uart.h
+.\obj\sys_timer.o: ..\Driver\Include\sys_clock.h
+.\obj\sys_timer.o: ..\Driver\Include\sys_gpio.h
+.\obj\sys_timer.o: ..\Driver\Include\sys_delay.h

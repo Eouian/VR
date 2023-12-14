@@ -1,0 +1,25 @@
+--cpu ARM926EJ-S
+".\obj\main.o"
+".\obj\standalone.o"
+".\obj\sys_start.o"
+".\obj\vectors.o"
+".\obj\sys_clock.o"
+".\obj\sys_uart.o"
+".\obj\sys_delay.o"
+".\obj\sys_ctl.o"
+".\obj\sys_interrupt.o"
+".\obj\sys_timer.o"
+".\obj\sys_mmu.o"
+".\obj\arm32.o"
+".\obj\sys_cache.o"
+".\obj\sys_lcd.o"
+".\obj\sys_defe.o"
+".\obj\sys_tve.o"
+".\obj\sys_tvd.o"
+".\obj\sys_lcd_gui_argb32.o"
+".\obj\sys_gpio.o"
+".\obj\sys_bmp.o"
+--strict --scatter "..\Script\F1C100S.sct"
+--entry 0x80000000 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lst\F1C100S.map" -o .\obj\F1C100S.axf

@@ -1,0 +1,10 @@
+.\obj\sys_tve.o: ..\Driver\Source\sys_tve.c
+.\obj\sys_tve.o: ..\Driver\Include\sys_tve.h
+.\obj\sys_tve.o: ..\Driver\Include\sys_types.h
+.\obj\sys_tve.o: ..\Driver\Include\sys_uart.h
+.\obj\sys_tve.o: ..\Driver\Include\sys_clock.h
+.\obj\sys_tve.o: ..\Driver\Include\sys_io.h
+.\obj\sys_tve.o: ..\Driver\Include\sys_delay.h
+.\obj\sys_tve.o: ..\Driver\Include\sys_lcd.h
+.\obj\sys_tve.o: D:\01_SoftWare\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\sys_tve.o: ..\Driver\Include\sys_lcd_conf.h

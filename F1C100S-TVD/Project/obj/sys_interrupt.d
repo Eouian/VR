@@ -1,0 +1,9 @@
+.\obj\sys_interrupt.o: ..\Driver\Source\sys_interrupt.c
+.\obj\sys_interrupt.o: ..\Driver\Include\sys_types.h
+.\obj\sys_interrupt.o: ..\Driver\Include\sys_uart.h
+.\obj\sys_interrupt.o: ..\Driver\Include\sys_clock.h
+.\obj\sys_interrupt.o: ..\Driver\Include\sys_io.h
+.\obj\sys_interrupt.o: ..\Driver\Include\sys_interrupt.h
+.\obj\sys_interrupt.o: ..\Driver\Include\sys_delay.h
+.\obj\sys_interrupt.o: ..\Driver\Include\sys_cache.h
+.\obj\sys_interrupt.o: ..\Driver\Include\sys_gpio.h

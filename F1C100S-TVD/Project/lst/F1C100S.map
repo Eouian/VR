@@ -1,0 +1,1212 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.main) refers to sys_clock.o(i.Sys_Clock_Init) for Sys_Clock_Init
+    main.o(i.main) refers to sys_mmu.o(i.sys_mmu_init) for sys_mmu_init
+    main.o(i.main) refers to sys_timer.o(i.Sys_TimerX_Init) for Sys_TimerX_Init
+    main.o(i.main) refers to sys_lcd.o(i.Sys_LCD_Init) for Sys_LCD_Init
+    main.o(i.main) refers to sys_tvd.o(i.f1c100s_tvd_Init) for f1c100s_tvd_Init
+    main.o(i.main) refers to sys_lcd.o(i.Set_Layer_format) for Set_Layer_format
+    main.o(i.main) refers to sys_lcd.o(i.set_video_window) for set_video_window
+    main.o(i.main) refers to sys_lcd.o(i.Enable_Layer_Video) for Enable_Layer_Video
+    main.o(i.main) refers to sys_timer.o(i.TIMER1_ISR) for TIMER1_ISR
+    main.o(i.main) refers to main.o(.bss) for .bss
+    sys_start.o(F1C100S_INIT) refers to __main.o(!!!main) for __main
+    sys_start.o(F1C100S_INIT) refers to vectors.o(Vect) for Vector_Table
+    vectors.o(Vect) refers to sys_start.o(F1C100S_INIT) for Reset_Go
+    vectors.o(Vect) refers to sys_interrupt.o(i.SWI_Handler2) for SWI_Handler2
+    vectors.o(Vect) refers to sys_interrupt.o(i.IRQ_Handler2) for IRQ_Handler2
+    sys_clock.o(i.Close_Dev_Clock) refers to llshl.o(.text) for __aeabi_llsl
+    sys_clock.o(i.Close_Dev_Clock) refers to sys_delay.o(i.delay_us) for delay_us
+    sys_clock.o(i.Open_Dev_Clock) refers to llshl.o(.text) for __aeabi_llsl
+    sys_clock.o(i.Open_Dev_Clock) refers to sys_delay.o(i.delay_us) for delay_us
+    sys_clock.o(i.Sys_Clock_Init) refers to aeabi_sdivfast.o(.text_udiv) for __aeabi_uidivmod
+    sys_clock.o(i.get_ahb_frequency) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_clock.o(i.get_ahb_frequency) refers to sys_clock.o(i.get_cpu_frequency) for get_cpu_frequency
+    sys_clock.o(i.get_ahb_frequency) refers to sys_clock.o(.constdata) for .constdata
+    sys_clock.o(i.get_apb_frequency) refers to sys_clock.o(i.get_ahb_frequency) for get_ahb_frequency
+    sys_clock.o(i.get_apb_frequency) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_clock.o(i.get_apb_frequency) refers to sys_clock.o(.constdata) for .constdata
+    sys_clock.o(i.get_cpu_frequency) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_clock.o(i.get_cpu_frequency) refers to sys_clock.o(.constdata) for .constdata
+    sys_clock.o(i.get_hclk_frequency) refers to sys_clock.o(i.get_cpu_frequency) for get_cpu_frequency
+    sys_clock.o(i.get_hclk_frequency) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_uart.o(i.FormatItem) refers to sys_uart.o(i.Sys_Uart_Put) for Sys_Uart_Put
+    sys_uart.o(i.FormatItem) refers to strlen.o(.text) for strlen
+    sys_uart.o(i.FormatItem) refers to aeabi_sdivfast.o(.text_udiv) for __aeabi_uidivmod
+    sys_uart.o(i.FormatItem) refers to sys_uart.o(.data) for .data
+    sys_uart.o(i.Sys_SET_UART_DBG) refers to sys_uart.o(.data) for .data
+    sys_uart.o(i.Sys_Uart_Init_F) refers to sys_clock.o(i.get_apb_frequency) for get_apb_frequency
+    sys_uart.o(i.Sys_Uart_Init_F) refers to aeabi_sdivfast.o(.text_udiv) for __aeabi_uidivmod
+    sys_uart.o(i.Sys_Uart_Init_F) refers to sys_gpio.o(i.GPIO_Config) for GPIO_Config
+    sys_uart.o(i.Sys_Uart_Init_F) refers to llshl.o(.text) for __aeabi_llsl
+    sys_uart.o(i.Sys_Uart_Init_F) refers to sys_delay.o(i.delay_us) for delay_us
+    sys_uart.o(i.Sys_Uart_Init_F) refers to sys_interrupt.o(i.IRQ_Init) for IRQ_Init
+    sys_uart.o(i.Sys_Uart_Init_F) refers to sys_uart.o(.data) for .data
+    sys_uart.o(i.Sys_Uart_Init_F) refers to sys_uart.o(i.UART2_ISR) for UART2_ISR
+    sys_uart.o(i.Sys_Uart_Init_F) refers to sys_uart.o(i.UART0_ISR) for UART0_ISR
+    sys_uart.o(i.Sys_Uart_Init_F) refers to sys_uart.o(i.UART1_ISR) for UART1_ISR
+    sys_uart.o(i.Sys_Uart_Putc) refers to sys_uart.o(i.Sys_Uart_Put) for Sys_Uart_Put
+    sys_uart.o(i.Sys_Uart_Putc) refers to sys_uart.o(.data) for .data
+    sys_uart.o(i.UART0_ISR) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_uart.o(i.UART0_ISR) refers to sys_uart.o(i.Sys_Uart_Put) for Sys_Uart_Put
+    sys_uart.o(i.UART1_ISR) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_uart.o(i.UART1_ISR) refers to sys_uart.o(i.Sys_Uart_Put) for Sys_Uart_Put
+    sys_uart.o(i.UART2_ISR) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_uart.o(i.UART2_ISR) refers to sys_uart.o(i.Sys_Uart_Put) for Sys_Uart_Put
+    sys_uart.o(i.sysPutString) refers to sys_uart.o(i.Sys_Uart_Put) for Sys_Uart_Put
+    sys_uart.o(i.sysPutString) refers to sys_uart.o(.data) for .data
+    sys_uart.o(i.sysprintf) refers to sys_uart.o(i.Sys_Uart_Put) for Sys_Uart_Put
+    sys_uart.o(i.sysprintf) refers to sys_uart.o(i.FormatItem) for FormatItem
+    sys_uart.o(i.sysprintf) refers to sys_uart.o(.data) for .data
+    sys_uart.o(i.sysprintf_r) refers to sys_uart.o(i.Sys_Uart_Put) for Sys_Uart_Put
+    sys_uart.o(i.sysprintf_r) refers to sys_uart.o(i.FormatItem) for FormatItem
+    sys_uart.o(i.sysprintf_r) refers to sys_uart.o(.data) for .data
+    sys_uart.o(i.sysprintf_rn) refers to sys_uart.o(i.Sys_Uart_Put) for Sys_Uart_Put
+    sys_uart.o(i.sysprintf_rn) refers to sys_uart.o(i.FormatItem) for FormatItem
+    sys_uart.o(i.sysprintf_rn) refers to sys_uart.o(.data) for .data
+    sys_delay.o(i.delay_ms) refers to sys_timer.o(i.AVS_Time_Init) for AVS_Time_Init
+    sys_delay.o(i.delay_ms) refers to sys_timer.o(i.AVS_Time_Start) for AVS_Time_Start
+    sys_delay.o(i.delay_ms) refers to sys_timer.o(i.AVS_Time_Read) for AVS_Time_Read
+    sys_delay.o(i.delay_us) refers to sys_timer.o(i.AVS_Time_Init_x) for AVS_Time_Init_x
+    sys_delay.o(i.delay_us) refers to sys_timer.o(i.AVS_Time_Start) for AVS_Time_Start
+    sys_delay.o(i.delay_us) refers to sys_timer.o(i.AVS_Time_Read) for AVS_Time_Read
+    sys_interrupt.o(i.IRQ_Init) refers to sys_interrupt.o(.data) for .data
+    sys_interrupt.o(i.__IRQ_Init) refers to sys_interrupt.o(.data) for .data
+    sys_interrupt.o(.data) refers to sys_interrupt.o(i.F1C100S_Interrupt_Shell) for F1C100S_Interrupt_Shell
+    sys_timer.o(i.Read_time_ms) refers to sys_timer.o(.data) for .data
+    sys_timer.o(i.Reset_time) refers to sys_timer.o(.data) for .data
+    sys_timer.o(i.Sys_TimerX_Init) refers to sys_timer.o(i.Timer_Init) for Timer_Init
+    sys_timer.o(i.Sys_TimerX_Init) refers to sys_interrupt.o(i.IRQ_Init) for IRQ_Init
+    sys_timer.o(i.Sys_TimerX_Init) refers to sys_interrupt.o(i.sysSetLocalInterrupt) for sysSetLocalInterrupt
+    sys_timer.o(i.TIMER1_ISR) refers to sys_timer.o(.data) for .data
+    sys_timer.o(i.Tdelay_ms) refers to sys_timer.o(.data) for .data
+    sys_timer.o(i.Timer_Demo) refers to sys_timer.o(i.Timer_Init) for Timer_Init
+    sys_timer.o(i.Timer_Demo) refers to sys_interrupt.o(i.IRQ_Init) for IRQ_Init
+    sys_timer.o(i.Timer_Demo) refers to sys_interrupt.o(i.sysSetLocalInterrupt) for sysSetLocalInterrupt
+    sys_timer.o(i.Timer_Demo) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_timer.o(i.Timer_Demo) refers to sys_delay.o(i.delay_ms) for delay_ms
+    sys_timer.o(i.Timer_Demo) refers to sys_timer.o(i.TIMER1_ISR) for TIMER1_ISR
+    sys_timer.o(i.Timer_Demo) refers to sys_timer.o(.data) for .data
+    sys_mmu.o(i.sys_mmu_init) refers to sys_cache.o(i.sysFlushCache) for sysFlushCache
+    sys_mmu.o(i.sys_mmu_init) refers to arm32.o(i.arm32_dcache_disable) for arm32_dcache_disable
+    sys_mmu.o(i.sys_mmu_init) refers to arm32.o(i.arm32_icache_disable) for arm32_icache_disable
+    sys_mmu.o(i.sys_mmu_init) refers to arm32.o(i.arm32_mmu_disable) for arm32_mmu_disable
+    sys_mmu.o(i.sys_mmu_init) refers to sys_mmu.o(i.map_l1_section) for map_l1_section
+    sys_mmu.o(i.sys_mmu_init) refers to arm32.o(i.arm32_ttb_set) for arm32_ttb_set
+    sys_mmu.o(i.sys_mmu_init) refers to arm32.o(i.arm32_tlb_invalidate) for arm32_tlb_invalidate
+    sys_mmu.o(i.sys_mmu_init) refers to arm32.o(i.arm32_domain_set) for arm32_domain_set
+    sys_mmu.o(i.sys_mmu_init) refers to arm32.o(i.arm32_mmu_enable) for arm32_mmu_enable
+    sys_mmu.o(i.sys_mmu_init) refers to arm32.o(i.arm32_icache_enable) for arm32_icache_enable
+    sys_mmu.o(i.sys_mmu_init) refers to arm32.o(i.arm32_dcache_enable) for arm32_dcache_enable
+    sys_mmu.o(i.sys_mmu_init) refers to sys_mmu.o(.bss) for mmuTable
+    arm32.o(i.arm32_dcache_disable) refers to arm32.o(i.arm32_read_p15_c1) for arm32_read_p15_c1
+    arm32.o(i.arm32_dcache_disable) refers to arm32.o(i.arm32_write_p15_c1) for arm32_write_p15_c1
+    arm32.o(i.arm32_dcache_enable) refers to arm32.o(i.arm32_read_p15_c1) for arm32_read_p15_c1
+    arm32.o(i.arm32_dcache_enable) refers to arm32.o(i.arm32_write_p15_c1) for arm32_write_p15_c1
+    arm32.o(i.arm32_icache_disable) refers to arm32.o(i.arm32_read_p15_c1) for arm32_read_p15_c1
+    arm32.o(i.arm32_icache_disable) refers to arm32.o(i.arm32_write_p15_c1) for arm32_write_p15_c1
+    arm32.o(i.arm32_icache_enable) refers to arm32.o(i.arm32_read_p15_c1) for arm32_read_p15_c1
+    arm32.o(i.arm32_icache_enable) refers to arm32.o(i.arm32_write_p15_c1) for arm32_write_p15_c1
+    arm32.o(i.arm32_mmu_disable) refers to arm32.o(i.arm32_read_p15_c1) for arm32_read_p15_c1
+    arm32.o(i.arm32_mmu_disable) refers to arm32.o(i.arm32_write_p15_c1) for arm32_write_p15_c1
+    arm32.o(i.arm32_mmu_enable) refers to arm32.o(i.arm32_read_p15_c1) for arm32_read_p15_c1
+    arm32.o(i.arm32_mmu_enable) refers to arm32.o(i.arm32_write_p15_c1) for arm32_write_p15_c1
+    sys_cache.o(i.sysFlushCache) refers to sys_ctl.o(SYS_INIT) for sys_flush_and_clean_dcache
+    sys_lcd.o(i.Debe_Init) refers to sys_delay.o(i.delay_ms) for delay_ms
+    sys_lcd.o(i.Debe_Init) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.Enable_LayerX_Video) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.Enable_Layer_Video) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.F1C100S_LCD_Config) refers to sys_lcd.o(i.Debe_Init) for Debe_Init
+    sys_lcd.o(i.F1C100S_LCD_Config) refers to sys_lcd.o(i.Tcon_Init) for Tcon_Init
+    sys_lcd.o(i.F1C100S_LCD_Config) refers to sys_lcd.o(.bss) for .bss
+    sys_lcd.o(i.F1C100S_LCD_Config) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.LCD_IO_Init) refers to sys_gpio.o(i.GPIO_Config) for GPIO_Config
+    sys_lcd.o(i.LCD_IO_Init) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.Set_LayerX_window) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.Set_Layer_format) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.Sys_LCD_Init) refers to sys_lcd.o(i.LCD_IO_Init) for LCD_IO_Init
+    sys_lcd.o(i.Sys_LCD_Init) refers to sys_lcd.o(i.F1C100S_LCD_Config) for F1C100S_LCD_Config
+    sys_lcd.o(i.Tcon_Init) refers to sys_delay.o(i.delay_ms) for delay_ms
+    sys_lcd.o(i.Tcon_Init) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.debe_set_layer_priority) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.f1c100s_lcd_set_addr) refers to sys_lcd.o(.bss) for .bss
+    sys_lcd.o(i.f1c100s_lcd_set_addr) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.f1c100s_tcon_enable) refers to sys_lcd.o(.data) for .data
+    sys_lcd.o(i.set_video_window) refers to sys_lcd.o(i.Set_LayerX_window) for Set_LayerX_window
+    sys_lcd.o(i.set_video_window) refers to sys_lcd.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_ClearINT) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Config_Src) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Enable) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_EnableINT) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Output_Select) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_QueryINT) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Reset) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_CSC_Coef) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_Fb_Addr) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_Init_Phase) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_defe.o(i.DE_SCAL_Set_Init_Phase) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_Out_Format) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_Out_Size) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_Reg_Base) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_Reg_Rdy) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_Scaling_Coef) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_defe.o(i.DE_SCAL_Set_Scaling_Coef) refers to aeabi_sdivfast.o(.text_udiv) for __aeabi_uidivmod
+    sys_defe.o(i.DE_SCAL_Set_Scaling_Coef) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_Scaling_Coef_for_video) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_defe.o(i.DE_SCAL_Set_Scaling_Coef_for_video) refers to aeabi_sdivfast.o(.text_udiv) for __aeabi_uidivmod
+    sys_defe.o(i.DE_SCAL_Set_Scaling_Coef_for_video) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Set_Scaling_Factor) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_defe.o(i.DE_SCAL_Set_Scaling_Factor) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.DE_SCAL_Start) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.Defe_Config) refers to sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) for Defe_Config_video_uvcombined_yuv422_to_argb_x
+    sys_defe.o(i.Defe_Config) refers to sys_tvd.o(.bss) for buff_c
+    sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) refers to sys_defe.o(i.DE_SCAL_Config_Src) for DE_SCAL_Config_Src
+    sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) refers to sys_defe.o(i.DE_SCAL_Set_CSC_Coef) for DE_SCAL_Set_CSC_Coef
+    sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) refers to sys_defe.o(i.DE_SCAL_Set_Scaling_Factor) for DE_SCAL_Set_Scaling_Factor
+    sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) refers to sys_defe.o(i.DE_SCAL_Set_Init_Phase) for DE_SCAL_Set_Init_Phase
+    sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) refers to sys_defe.o(i.DE_SCAL_Set_Scaling_Coef) for DE_SCAL_Set_Scaling_Coef
+    sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) refers to sys_defe.o(i.DE_SCAL_Set_Scaling_Coef_for_video) for DE_SCAL_Set_Scaling_Coef_for_video
+    sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) refers to sys_defe.o(i.DE_SCAL_Set_Out_Size) for DE_SCAL_Set_Out_Size
+    sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.Defe_Config_x) refers to sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x) for Defe_Config_video_uvcombined_yuv422_to_argb_x
+    sys_defe.o(i.Defe_Config_x) refers to sys_tvd.o(.bss) for buff_c
+    sys_defe.o(i.Defe_Init) refers to sys_clock.o(i.Open_Dev_Clock) for Open_Dev_Clock
+    sys_defe.o(i.Defe_Init) refers to sys_defe.o(.data) for .data
+    sys_defe.o(i.Defe_Start) refers to sys_defe.o(.data) for .data
+    sys_tve.o(i.TVE_Clock_Open) refers to sys_delay.o(i.delay_ms) for delay_ms
+    sys_tve.o(i.TVE_Config) refers to sys_tve.o(i.TVE_Clock_Open) for TVE_Clock_Open
+    sys_tve.o(i.TVE_Config) refers to sys_tve.o(i.TVE_set_tv_mode) for TVE_set_tv_mode
+    sys_tve.o(i.TVE_Config) refers to sys_tve.o(i.TVE_init) for TVE_init
+    sys_tve.o(i.TVE_Config) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_Init) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tve.o(i.TVE_Init) refers to sys_tve.o(i.TVE_Clock_Open) for TVE_Clock_Open
+    sys_tve.o(i.TVE_clear_int) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_close) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_dac_autocheck_disable) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_dac_autocheck_enable) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_dac_disable) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tve.o(i.TVE_dac_disable) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_dac_enable) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tve.o(i.TVE_dac_enable) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_dac_get_de_bounce) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tve.o(i.TVE_dac_get_de_bounce) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_dac_int_disable) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_dac_int_enable) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_dac_set_de_bounce) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tve.o(i.TVE_dac_set_de_bounce) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_dac_set_source) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tve.o(i.TVE_exit) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_get_dac_status) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tve.o(i.TVE_get_dac_status) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_get_reg_base) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_init) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_open) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_query_int) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_query_interface) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_set_reg_base) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_set_tv_mode) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.TVE_set_vga_mode) refers to sys_tve.o(.data) for .data
+    sys_tve.o(i.tve_low_enhance) refers to sys_tve.o(.data) for .data
+    sys_tvd.o(i.BSP_TVD_config) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tvd.o(i.BSP_TVD_config) refers to sys_delay.o(i.delay_ms) for delay_ms
+    sys_tvd.o(i.TVD_Config) refers to sys_tvd.o(i.f1c100s_tvd_init) for f1c100s_tvd_init
+    sys_tvd.o(i.TVD_Config) refers to sys_defe.o(i.Defe_Init) for Defe_Init
+    sys_tvd.o(i.TVD_Config) refers to sys_defe.o(i.Defe_Config) for Defe_Config
+    sys_tvd.o(i.TVD_Config) refers to sys_defe.o(i.Defe_Start) for Defe_Start
+    sys_tvd.o(i.TvdDefeConfig) refers to sys_defe.o(i.Defe_Init) for Defe_Init
+    sys_tvd.o(i.TvdDefeConfig) refers to sys_defe.o(i.Defe_Config) for Defe_Config
+    sys_tvd.o(i.TvdDefeConfig) refers to sys_defe.o(i.Defe_Start) for Defe_Start
+    sys_tvd.o(i.f1c100s_clk_init) refers to sys_clock.o(i.Open_Dev_Clock) for Open_Dev_Clock
+    sys_tvd.o(i.f1c100s_clk_init) refers to sys_delay.o(i.delay_ms) for delay_ms
+    sys_tvd.o(i.f1c100s_tvd_AutoMode) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tvd.o(i.f1c100s_tvd_AutoMode) refers to sys_tvd.o(i.f1c100s_tvd_init) for f1c100s_tvd_init
+    sys_tvd.o(i.f1c100s_tvd_AutoMode) refers to sys_defe.o(i.Defe_Init) for Defe_Init
+    sys_tvd.o(i.f1c100s_tvd_AutoMode) refers to sys_defe.o(i.Defe_Config) for Defe_Config
+    sys_tvd.o(i.f1c100s_tvd_AutoMode) refers to sys_defe.o(i.Defe_Start) for Defe_Start
+    sys_tvd.o(i.f1c100s_tvd_AutoMode) refers to sys_tvd.o(.data) for .data
+    sys_tvd.o(i.f1c100s_tvd_Init) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_tvd.o(i.f1c100s_tvd_Init) refers to sys_tvd.o(i.f1c100s_tvd_init) for f1c100s_tvd_init
+    sys_tvd.o(i.f1c100s_tvd_Init) refers to sys_defe.o(i.Defe_Init) for Defe_Init
+    sys_tvd.o(i.f1c100s_tvd_Init) refers to sys_defe.o(i.Defe_Config) for Defe_Config
+    sys_tvd.o(i.f1c100s_tvd_Init) refers to sys_defe.o(i.Defe_Start) for Defe_Start
+    sys_tvd.o(i.f1c100s_tvd_Init) refers to sys_tvd.o(.data) for .data
+    sys_tvd.o(i.f1c100s_tvd_init) refers to sys_tvd.o(i.f1c100s_clk_init) for f1c100s_clk_init
+    sys_tvd.o(i.f1c100s_tvd_init) refers to sys_tvd.o(i.BSP_TVD_config) for BSP_TVD_config
+    sys_tvd.o(i.f1c100s_tvd_init) refers to sys_tvd.o(.data) for .data
+    sys_tvd.o(i.f1c100s_tvd_init) refers to sys_tvd.o(.bss) for .bss
+    sys_tvd.o(i.tvd_clear_v) refers to sys_tvd.o(.data) for .data
+    sys_lcd_gui_argb32.o(i.LCD_Clear_ARGB32) refers to sys_lcd_gui_argb32.o(.data) for .data
+    sys_lcd_gui_argb32.o(i.LCD_Draw_ASCII_ARGB32) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_lcd_gui_argb32.o(i.LCD_Draw_ASCII_ARGB32) refers to sys_lcd_gui_argb32.o(.constdata) for .constdata
+    sys_lcd_gui_argb32.o(i.LCD_Draw_ASCII_ARGB32) refers to sys_lcd_gui_argb32.o(.data) for .data
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ1616_ARGB32) refers to sys_lcd_gui_argb32.o(i.LCD_Draw_HZ_ARGB32) for LCD_Draw_HZ_ARGB32
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ1616_ARGB32) refers to sys_lcd_gui_argb32.o(.constdata) for .constdata
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ2424_ARGB32) refers to sys_lcd_gui_argb32.o(i.LCD_Draw_HZ_ARGB32) for LCD_Draw_HZ_ARGB32
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ2424_ARGB32) refers to sys_lcd_gui_argb32.o(.constdata) for .constdata
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ3232_ARGB32) refers to sys_lcd_gui_argb32.o(i.LCD_Draw_HZ_ARGB32) for LCD_Draw_HZ_ARGB32
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ3232_ARGB32) refers to sys_lcd_gui_argb32.o(.constdata) for .constdata
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ4040_ARGB32) refers to sys_lcd_gui_argb32.o(i.LCD_Draw_HZ_ARGB32) for LCD_Draw_HZ_ARGB32
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ4040_ARGB32) refers to sys_lcd_gui_argb32.o(.constdata) for .constdata
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ4848_ARGB32) refers to sys_lcd_gui_argb32.o(i.LCD_Draw_HZ_ARGB32) for LCD_Draw_HZ_ARGB32
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ4848_ARGB32) refers to sys_lcd_gui_argb32.o(.constdata) for .constdata
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ_ARGB32) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_lcd_gui_argb32.o(i.LCD_Draw_HZ_ARGB32) refers to sys_lcd_gui_argb32.o(.data) for .data
+    sys_lcd_gui_argb32.o(i.LCD_Draw_Picture_ARGB32) refers to sys_lcd_gui_argb32.o(.data) for .data
+    sys_lcd_gui_argb32.o(i.LCD_Draw_Points_ARGB32) refers to sys_lcd_gui_argb32.o(.data) for .data
+    sys_lcd_gui_argb32.o(i.LCD_Draw_Rectangle_ARGB32) refers to sys_lcd_gui_argb32.o(.data) for .data
+    sys_lcd_gui_argb32.o(i.LCD_Draw_String_ARGB32) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_lcd_gui_argb32.o(i.LCD_Draw_String_ARGB32) refers to sys_lcd_gui_argb32.o(.data) for .data
+    sys_lcd_gui_argb32.o(i.LCD_Draw_String_ARGB32) refers to sys_lcd_gui_argb32.o(.constdata) for .constdata
+    sys_lcd_gui_argb32.o(i.LCD_Read_Lcdbuff_ARGB32) refers to sys_lcd_gui_argb32.o(.data) for .data
+    sys_lcd_gui_argb32.o(.data) refers to main.o(.bss) for LCDbuff2
+    sys_gpio.o(i.GPIO_External_Inerrupt_Disable) refers to llshl.o(.text) for __aeabi_llsl
+    sys_gpio.o(i.GPIO_External_Inerrupt_Enable) refers to llshl.o(.text) for __aeabi_llsl
+    sys_bmp.o(i.FiResize2) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    sys_bmp.o(i.LCD_Clear) refers to main.o(.bss) for LCDbuff2
+    sys_bmp.o(i.LCD_Draw_Picture) refers to main.o(.bss) for LCDbuff2
+    sys_bmp.o(i.LCD_Draw_Picture1) refers to main.o(.bss) for LCDbuff2
+    sys_bmp.o(i.LCD_Draw_Picture_2) refers to sys_uart.o(i.sysprintf) for sysprintf
+    sys_bmp.o(i.LCD_Draw_Picture_2) refers to main.o(.bss) for LCDbuff2
+    sys_bmp.o(i.save_photo) refers to sys_delay.o(i.delay_ms) for delay_ms
+    sys_bmp.o(i.save_photo) refers to sys_cache.o(i.sysFlushCache) for sysFlushCache
+    sys_bmp.o(i.save_photo) refers to sys_bmp.o(i.bmp_yuv422_to_rgb8888) for bmp_yuv422_to_rgb8888
+    sys_bmp.o(i.save_photo) refers to sys_bmp.o(i.FiResize2) for FiResize2
+    sys_bmp.o(i.save_photo) refers to sys_tvd.o(.data) for SAVE_BMP
+    sys_bmp.o(i.save_photo) refers to sys_tvd.o(.data) for TVD_OUT_H
+    sys_bmp.o(i.save_photo) refers to sys_tvd.o(.data) for TVD_OUT_W
+    sys_bmp.o(i.save_photo) refers to sys_bmp.o(.bss) for .bss
+    sys_bmp.o(i.save_photo) refers to sys_tvd.o(.bss) for buff_c
+    sys_bmp.o(i.save_photo) refers to main.o(.bss) for LCDbuff2
+    sys_bmp.o(i.show_mini_photo) refers to sys_bmp.o(i.FiResize2) for FiResize2
+    sys_bmp.o(i.show_mini_photo) refers to sys_tvd.o(i.BSP_TVD_capture_on2) for BSP_TVD_capture_on2
+    sys_bmp.o(i.show_mini_photo) refers to sys_tvd.o(.data) for TVD_OUT_H
+    sys_bmp.o(i.show_mini_photo) refers to sys_tvd.o(.data) for TVD_OUT_W
+    sys_bmp.o(i.show_mini_photo) refers to sys_bmp.o(.bss) for .bss
+    sys_bmp.o(i.show_mini_photo) refers to main.o(.bss) for LCDbuff2
+    sys_bmp.o(i.sprintf_buf) refers to sys_uart.o(i.sysprintf) for sysprintf
+    aeabi_sdivfast.o(.text_udiv) refers to aeabi_sdivfast.o(.text) for __arm_div2
+    aeabi_sdivfast_div0.o(.text_udiv) refers to aeabi_sdivfast_div0.o(.text) for __arm_div2
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    aeabi_idiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to standalone.o(i.__user_setup_stackheap) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to standalone.o(i._sys_exit) for _sys_exit
+    defsig_exit.o(.text) refers to standalone.o(i._sys_exit) for _sys_exit
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libinit2.o(.ARM.Collect$$libinit$$00000001) refers to fpinit.o(x$fpl$fpinit) for _fp_init
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to standalone.o(i._sys_exit) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to standalone.o(i._ttywrch) for _ttywrch
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing standalone.o(i._ttywrch), (4 bytes).
+    Removing standalone.o(.data), (4 bytes).
+    Removing sys_clock.o(i.Close_Dev_Clock), (136 bytes).
+    Removing sys_clock.o(i.get_ahb_frequency), (184 bytes).
+    Removing sys_clock.o(i.get_apb_frequency), (60 bytes).
+    Removing sys_clock.o(i.get_cpu_frequency), (156 bytes).
+    Removing sys_clock.o(i.get_hclk_frequency), (40 bytes).
+    Removing sys_clock.o(i.get_pll_periph_frequency), (52 bytes).
+    Removing sys_clock.o(.constdata), (60 bytes).
+    Removing sys_uart.o(i.Sys_SET_UART_DBG), (16 bytes).
+    Removing sys_uart.o(i.Sys_Uart_Init_F), (704 bytes).
+    Removing sys_uart.o(i.Sys_Uart_Putc), (20 bytes).
+    Removing sys_uart.o(i.Sys_Uart_Read_RxFifo_count), (52 bytes).
+    Removing sys_uart.o(i.Sys_Uart_Read_TxFifo_count), (52 bytes).
+    Removing sys_uart.o(i.Sys_Uart_Set_Rx_Fifo_Trigger), (64 bytes).
+    Removing sys_uart.o(i.Sys_Uart_Set_Tx_Fifo_Trigger), (64 bytes).
+    Removing sys_uart.o(i.Sys_Uart_TX_Interrupt), (68 bytes).
+    Removing sys_uart.o(i.UART0_ISR), (100 bytes).
+    Removing sys_uart.o(i.UART1_ISR), (100 bytes).
+    Removing sys_uart.o(i.UART2_ISR), (100 bytes).
+    Removing sys_uart.o(i.printf_null), (4 bytes).
+    Removing sys_uart.o(i.sysPutString), (56 bytes).
+    Removing sys_uart.o(i.sysprintf_r), (160 bytes).
+    Removing sys_uart.o(i.sysprintf_rn), (172 bytes).
+    Removing sys_uart.o(i.uart_get_addr), (52 bytes).
+    Removing sys_interrupt.o(i.FastForcing), (56 bytes).
+    Removing sys_interrupt.o(i.IRQ_Disable), (40 bytes).
+    Removing sys_interrupt.o(i.IRQ_Enable), (40 bytes).
+    Removing sys_interrupt.o(i.__IRQ_Init), (208 bytes).
+    Removing sys_interrupt.o(i.sysGetIBitState), (20 bytes).
+    Removing sys_timer.o(i.AVS_Time_Pause), (48 bytes).
+    Removing sys_timer.o(i.AVS_Time_Recover), (48 bytes).
+    Removing sys_timer.o(i.AVS_Time_Stop), (84 bytes).
+    Removing sys_timer.o(i.Read_time_ms), (16 bytes).
+    Removing sys_timer.o(i.Reset_time), (20 bytes).
+    Removing sys_timer.o(i.TIMER0_ISR), (24 bytes).
+    Removing sys_timer.o(i.TIMER2_ISR), (24 bytes).
+    Removing sys_timer.o(i.Tdelay_ms), (28 bytes).
+    Removing sys_timer.o(i.Timer_Demo), (116 bytes).
+    Removing sys_timer.o(i.Timer_disable), (28 bytes).
+    Removing sys_timer.o(i.Timer_enable), (28 bytes).
+    Removing sys_mmu.o(i.read16), (16 bytes).
+    Removing sys_mmu.o(i.read32), (16 bytes).
+    Removing sys_mmu.o(i.read64), (16 bytes).
+    Removing sys_mmu.o(i.read8), (16 bytes).
+    Removing sys_mmu.o(i.write16), (8 bytes).
+    Removing sys_mmu.o(i.write32), (8 bytes).
+    Removing sys_mmu.o(i.write64), (8 bytes).
+    Removing sys_mmu.o(i.write8), (8 bytes).
+    Removing arm32.o(i.arm32_read_p15_c0), (28 bytes).
+    Removing sys_cache.o(i.sysInvalidCache), (12 bytes).
+    Removing sys_lcd.o(i.Debe_Clk_Open), (40 bytes).
+    Removing sys_lcd.o(i.Enable_LayerX_Video), (32 bytes).
+    Removing sys_lcd.o(i.TCON_ISR), (24 bytes).
+    Removing sys_lcd.o(i.Tcon_Clk_Open), (56 bytes).
+    Removing sys_lcd.o(i.debe_set_layer_priority), (36 bytes).
+    Removing sys_lcd.o(i.f1c100s_lcd_set_addr), (56 bytes).
+    Removing sys_lcd.o(i.f1c100s_tcon_enable), (32 bytes).
+    Removing sys_lcd.o(i.lcd_wait_vertical_blanking_interrupt), (56 bytes).
+    Removing sys_defe.o(i.DE_SCAL_ClearINT), (32 bytes).
+    Removing sys_defe.o(i.DE_SCAL_Enable), (48 bytes).
+    Removing sys_defe.o(i.DE_SCAL_EnableINT), (32 bytes).
+    Removing sys_defe.o(i.DE_SCAL_Output_Select), (104 bytes).
+    Removing sys_defe.o(i.DE_SCAL_QueryINT), (20 bytes).
+    Removing sys_defe.o(i.DE_SCAL_Reset), (80 bytes).
+    Removing sys_defe.o(i.DE_SCAL_Set_Fb_Addr), (88 bytes).
+    Removing sys_defe.o(i.DE_SCAL_Set_Out_Format), (84 bytes).
+    Removing sys_defe.o(i.DE_SCAL_Set_Reg_Base), (20 bytes).
+    Removing sys_defe.o(i.DE_SCAL_Set_Reg_Rdy), (32 bytes).
+    Removing sys_defe.o(i.DE_SCAL_Start), (32 bytes).
+    Removing sys_defe.o(i.Defe_Config_x), (112 bytes).
+    Removing sys_defe.o(i.Defe_Demo), (4 bytes).
+    Removing sys_defe.o(.data), (1024 bytes).
+    Removing sys_tve.o(i.TCON1_Init), (408 bytes).
+    Removing sys_tve.o(i.TVE_Clock_Open), (120 bytes).
+    Removing sys_tve.o(i.TVE_Config), (104 bytes).
+    Removing sys_tve.o(i.TVE_Init), (32 bytes).
+    Removing sys_tve.o(i.TVE_clear_int), (32 bytes).
+    Removing sys_tve.o(i.TVE_close), (32 bytes).
+    Removing sys_tve.o(i.TVE_dac_autocheck_disable), (36 bytes).
+    Removing sys_tve.o(i.TVE_dac_autocheck_enable), (36 bytes).
+    Removing sys_tve.o(i.TVE_dac_disable), (96 bytes).
+    Removing sys_tve.o(i.TVE_dac_enable), (104 bytes).
+    Removing sys_tve.o(i.TVE_dac_get_de_bounce), (96 bytes).
+    Removing sys_tve.o(i.TVE_dac_int_disable), (40 bytes).
+    Removing sys_tve.o(i.TVE_dac_int_enable), (40 bytes).
+    Removing sys_tve.o(i.TVE_dac_set_de_bounce), (112 bytes).
+    Removing sys_tve.o(i.TVE_dac_set_source), (52 bytes).
+    Removing sys_tve.o(i.TVE_exit), (32 bytes).
+    Removing sys_tve.o(i.TVE_get_dac_status), (76 bytes).
+    Removing sys_tve.o(i.TVE_get_reg_base), (16 bytes).
+    Removing sys_tve.o(i.TVE_init), (56 bytes).
+    Removing sys_tve.o(i.TVE_open), (32 bytes).
+    Removing sys_tve.o(i.TVE_query_int), (24 bytes).
+    Removing sys_tve.o(i.TVE_query_interface), (40 bytes).
+    Removing sys_tve.o(i.TVE_set_reg_base), (20 bytes).
+    Removing sys_tve.o(i.TVE_set_tv_mode), (336 bytes).
+    Removing sys_tve.o(i.TVE_set_vga_mode), (56 bytes).
+    Removing sys_tve.o(i.tve_low_enhance), (184 bytes).
+    Removing sys_tve.o(.data), (4 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_capture_off), (24 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_capture_on), (24 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_capture_on2), (24 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_get_status), (44 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_init), (20 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_input_select), (32 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_irq_enable), (32 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_irq_status_clear), (28 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_irq_status_get), (36 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_set_addr_c), (28 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_set_addr_y), (28 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_set_fmt), (64 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_set_height), (32 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_set_ver_start), (40 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_set_width), (40 bytes).
+    Removing sys_tvd.o(i.BSP_TVD_set_width_jump), (16 bytes).
+    Removing sys_tvd.o(i.TVD_Config), (32 bytes).
+    Removing sys_tvd.o(i.TvdDefeConfig), (28 bytes).
+    Removing sys_tvd.o(i.f1c100s_tvd_AutoMode), (252 bytes).
+    Removing sys_tvd.o(i.tvd_clear_v), (24 bytes).
+    Removing sys_tvd.o(.data), (4 bytes).
+    Removing sys_tvd.o(.data), (4 bytes).
+    Removing sys_tvd.o(.data), (4 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Clear_ARGB32), (44 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_ASCII_ARGB32), (372 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_HZ1616_ARGB32), (52 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_HZ2424_ARGB32), (56 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_HZ3232_ARGB32), (52 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_HZ4040_ARGB32), (60 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_HZ4848_ARGB32), (56 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_HZ_ARGB32), (456 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_Picture_ARGB32), (120 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_Points_ARGB32), (32 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_Rectangle_ARGB32), (104 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Draw_String_ARGB32), (532 bytes).
+    Removing sys_lcd_gui_argb32.o(i.LCD_Read_Lcdbuff_ARGB32), (120 bytes).
+    Removing sys_lcd_gui_argb32.o(.constdata), (2528 bytes).
+    Removing sys_lcd_gui_argb32.o(.data), (4 bytes).
+    Removing sys_gpio.o(i.GPIO_External_Inerrupt_Config), (60 bytes).
+    Removing sys_gpio.o(i.GPIO_External_Inerrupt_Disable), (48 bytes).
+    Removing sys_gpio.o(i.GPIO_External_Inerrupt_Enable), (48 bytes).
+    Removing sys_gpio.o(i.GPIO_External_Inerrupt_Status), (20 bytes).
+    Removing sys_gpio.o(i.GPIO_Multi_Driving), (56 bytes).
+    Removing sys_gpio.o(i.GPIO_READ), (20 bytes).
+    Removing sys_gpio.o(i.GPIO_RESET), (20 bytes).
+    Removing sys_gpio.o(i.GPIO_SET), (20 bytes).
+    Removing sys_bmp.o(i.FiResize2), (528 bytes).
+    Removing sys_bmp.o(i.LCD_Clear), (100 bytes).
+    Removing sys_bmp.o(i.LCD_Draw_Picture), (112 bytes).
+    Removing sys_bmp.o(i.LCD_Draw_Picture1), (144 bytes).
+    Removing sys_bmp.o(i.LCD_Draw_Picture_2), (532 bytes).
+    Removing sys_bmp.o(i.bmp_yuv422_to_rgb8888), (444 bytes).
+    Removing sys_bmp.o(i.save_photo), (280 bytes).
+    Removing sys_bmp.o(i.show_mini_photo), (192 bytes).
+    Removing sys_bmp.o(i.sprintf_buf), (152 bytes).
+    Removing sys_bmp.o(.bss), (3194880 bytes).
+
+156 unused section(s) (total 3210808 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/dclz77c.s                  0x00000000   Number         0  __dclz77c.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast_div0.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast.o ABSOLUTE
+    ../clib/divrt.s                          0x00000000   Number         0  divrt_9e_div0.o ABSOLUTE
+    ../clib/divrt.s                          0x00000000   Number         0  divrt_9e.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/longlong.s                       0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../clib/string.c                         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ..\Driver\Source\arm32.c                 0x00000000   Number         0  arm32.o ABSOLUTE
+    ..\Driver\Source\standalone.c            0x00000000   Number         0  standalone.o ABSOLUTE
+    ..\Driver\Source\sys_cache.c             0x00000000   Number         0  sys_cache.o ABSOLUTE
+    ..\Driver\Source\sys_clock.c             0x00000000   Number         0  sys_clock.o ABSOLUTE
+    ..\Driver\Source\sys_ctl.s               0x00000000   Number         0  sys_ctl.o ABSOLUTE
+    ..\Driver\Source\sys_defe.c              0x00000000   Number         0  sys_defe.o ABSOLUTE
+    ..\Driver\Source\sys_delay.c             0x00000000   Number         0  sys_delay.o ABSOLUTE
+    ..\Driver\Source\sys_gpio.c              0x00000000   Number         0  sys_gpio.o ABSOLUTE
+    ..\Driver\Source\sys_interrupt.c         0x00000000   Number         0  sys_interrupt.o ABSOLUTE
+    ..\Driver\Source\sys_lcd.c               0x00000000   Number         0  sys_lcd.o ABSOLUTE
+    ..\Driver\Source\sys_lcd_gui_argb32.c    0x00000000   Number         0  sys_lcd_gui_argb32.o ABSOLUTE
+    ..\Driver\Source\sys_mmu.c               0x00000000   Number         0  sys_mmu.o ABSOLUTE
+    ..\Driver\Source\sys_start.s             0x00000000   Number         0  sys_start.o ABSOLUTE
+    ..\Driver\Source\sys_timer.c             0x00000000   Number         0  sys_timer.o ABSOLUTE
+    ..\Driver\Source\sys_tvd.c               0x00000000   Number         0  sys_tvd.o ABSOLUTE
+    ..\Driver\Source\sys_tve.c               0x00000000   Number         0  sys_tve.o ABSOLUTE
+    ..\Driver\Source\sys_uart.c              0x00000000   Number         0  sys_uart.o ABSOLUTE
+    ..\Driver\Source\vectors.s               0x00000000   Number         0  vectors.o ABSOLUTE
+    ..\USR\bmp\sys_bmp.c                     0x00000000   Number         0  sys_bmp.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    F1C100S_INIT                             0x80000000   Section       96  sys_start.o(F1C100S_INIT)
+    !!!main                                  0x80000060   Section        8  __main.o(!!!main)
+    !!!scatter                               0x80000068   Section       60  __scatter.o(!!!scatter)
+    !!dclz77c                                0x800000a4   Section       96  __dclz77c.o(!!dclz77c)
+    _decompress_loop                         0x800000af   Thumb Code     0  __dclz77c.o(!!dclz77c)
+    _decompress_getlen                       0x800000bd   Thumb Code     0  __dclz77c.o(!!dclz77c)
+    _decompress_lits                         0x800000c5   Thumb Code     0  __dclz77c.o(!!dclz77c)
+    _decompress_lit                          0x800000c9   Thumb Code     0  __dclz77c.o(!!dclz77c)
+    _decompress_setupcopy                    0x800000d5   Thumb Code     0  __dclz77c.o(!!dclz77c)
+    _decompress_setupcopy_shortx             0x800000eb   Thumb Code     0  __dclz77c.o(!!dclz77c)
+    _decompress_copy                         0x800000f1   Thumb Code     0  __dclz77c.o(!!dclz77c)
+    _decompress_end                          0x800000fd   Thumb Code     0  __dclz77c.o(!!dclz77c)
+    !!handler_copy                           0x80000104   Section       40  __scatter_copy.o(!!handler_copy)
+    !!handler_zi                             0x8000012c   Section       44  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x80000158   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x8000015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x8000015a   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x8000015c   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x8000015e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x8000015e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x8000015e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x8000015e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x8000015e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x8000015e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x8000015e   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x80000160   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x80000160   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x80000160   Section        8  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x80000168   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x80000168   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x8000016c   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x8000016c   Section       40  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x80000194   Section        4  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x80000198   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x80000198   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x8000019c   Section        8  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x800001a4   Section       40  llshl.o(.text)
+    .text                                    0x800001cc   Section        0  strlen.o(.text)
+    .text                                    0x80000210   Section      552  aeabi_sdivfast.o(.text)
+    __arm_div_large_positive                 0x80000244   ARM Code       0  aeabi_sdivfast.o(.text)
+    __arm_div16                              0x8000026c   ARM Code       0  aeabi_sdivfast.o(.text)
+    __arm_div12                              0x8000029c   ARM Code       0  aeabi_sdivfast.o(.text)
+    __arm_div8                               0x800002d0   ARM Code       0  aeabi_sdivfast.o(.text)
+    __arm_div5                               0x800002f4   ARM Code       0  aeabi_sdivfast.o(.text)
+    __arm_div2                               0x80000318   ARM Code       0  aeabi_sdivfast.o(.text)
+    .text                                    0x80000438   Section        0  exit.o(.text)
+    .text_udiv                               0x80000448   Section       48  aeabi_sdivfast.o(.text_udiv)
+    SYS_INIT                                 0x80000478   Section       48  sys_ctl.o(SYS_INIT)
+    Vect                                     0x800004a8   Section      148  vectors.o(Vect)
+    Undefined_Handler                        0x800004e8   ARM Code       0  vectors.o(Vect)
+    SWI_Handler                              0x800004ec   ARM Code       0  vectors.o(Vect)
+    Prefetch_Handler                         0x800004f0   ARM Code       0  vectors.o(Vect)
+    Abort_Handler                            0x800004f4   ARM Code       0  vectors.o(Vect)
+    IRQ_Handler                              0x800004fc   ARM Code       0  vectors.o(Vect)
+    FIQ_Handler                              0x80000500   ARM Code       0  vectors.o(Vect)
+    i.AVS_Time_Init                          0x8000053c   Section        0  sys_timer.o(i.AVS_Time_Init)
+    i.AVS_Time_Init_x                        0x800005ac   Section        0  sys_timer.o(i.AVS_Time_Init_x)
+    i.AVS_Time_Read                          0x80000614   Section        0  sys_timer.o(i.AVS_Time_Read)
+    i.AVS_Time_Start                         0x8000064c   Section        0  sys_timer.o(i.AVS_Time_Start)
+    i.BSP_TVD_config                         0x800006a0   Section        0  sys_tvd.o(i.BSP_TVD_config)
+    __switch$$                               0x80000788   ARM Code       0  sys_tvd.o(i.BSP_TVD_config)
+    i.DE_SCAL_Config_Src                     0x80000c80   Section        0  sys_defe.o(i.DE_SCAL_Config_Src)
+    i.DE_SCAL_Set_CSC_Coef                   0x8000146c   Section        0  sys_defe.o(i.DE_SCAL_Set_CSC_Coef)
+    i.DE_SCAL_Set_Init_Phase                 0x80001578   Section        0  sys_defe.o(i.DE_SCAL_Set_Init_Phase)
+    i.DE_SCAL_Set_Out_Size                   0x80001944   Section        0  sys_defe.o(i.DE_SCAL_Set_Out_Size)
+    i.DE_SCAL_Set_Scaling_Coef               0x80001a5c   Section        0  sys_defe.o(i.DE_SCAL_Set_Scaling_Coef)
+    i.DE_SCAL_Set_Scaling_Coef_for_video     0x80001e4c   Section        0  sys_defe.o(i.DE_SCAL_Set_Scaling_Coef_for_video)
+    i.DE_SCAL_Set_Scaling_Factor             0x80002294   Section        0  sys_defe.o(i.DE_SCAL_Set_Scaling_Factor)
+    i.Debe_Init                              0x800023fc   Section        0  sys_lcd.o(i.Debe_Init)
+    i.Defe_Config                            0x8000257c   Section        0  sys_defe.o(i.Defe_Config)
+    i.Defe_Config_video_uvcombined_yuv422_to_argb_x 0x800025f0   Section        0  sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x)
+    i.Defe_Init                              0x800027a4   Section        0  sys_defe.o(i.Defe_Init)
+    i.Defe_Start                             0x80002828   Section        0  sys_defe.o(i.Defe_Start)
+    i.Enable_Layer_Video                     0x80002844   Section        0  sys_lcd.o(i.Enable_Layer_Video)
+    i.F1C100S_Interrupt_Shell                0x80002864   Section        0  sys_interrupt.o(i.F1C100S_Interrupt_Shell)
+    i.F1C100S_LCD_Config                     0x80002868   Section        0  sys_lcd.o(i.F1C100S_LCD_Config)
+    i.FormatItem                             0x80002930   Section        0  sys_uart.o(i.FormatItem)
+    FormatItem                               0x80002930   ARM Code     948  sys_uart.o(i.FormatItem)
+    i.GPIO_Config                            0x80002ce8   Section        0  sys_gpio.o(i.GPIO_Config)
+    i.IRQ_Handler2                           0x80002d78   Section        0  sys_interrupt.o(i.IRQ_Handler2)
+    i.IRQ_Init                               0x80002d8c   Section        0  sys_interrupt.o(i.IRQ_Init)
+    __switch$$                               0x80002dbc   ARM Code       0  sys_interrupt.o(i.IRQ_Init)
+    i.LCD_IO_Init                            0x80002e58   Section        0  sys_lcd.o(i.LCD_IO_Init)
+    i.Open_Dev_Clock                         0x80003090   Section        0  sys_clock.o(i.Open_Dev_Clock)
+    i.SWI_Handler2                           0x80003118   Section        0  sys_interrupt.o(i.SWI_Handler2)
+    i.Set_LayerX_window                      0x8000311c   Section        0  sys_lcd.o(i.Set_LayerX_window)
+    i.Set_Layer_format                       0x800031a8   Section        0  sys_lcd.o(i.Set_Layer_format)
+    i.Sys_Clock_Init                         0x800031d8   Section        0  sys_clock.o(i.Sys_Clock_Init)
+    i.Sys_LCD_Init                           0x80003368   Section        0  sys_lcd.o(i.Sys_LCD_Init)
+    i.Sys_TimerX_Init                        0x800033cc   Section        0  sys_timer.o(i.Sys_TimerX_Init)
+    i.Sys_Uart_Put                           0x80003424   Section        0  sys_uart.o(i.Sys_Uart_Put)
+    i.TIMER1_ISR                             0x80003468   Section        0  sys_timer.o(i.TIMER1_ISR)
+    i.Tcon_Init                              0x800034a0   Section        0  sys_lcd.o(i.Tcon_Init)
+    i.Timer_Init                             0x80003710   Section        0  sys_timer.o(i.Timer_Init)
+    i.__user_setup_stackheap                 0x80003780   Section        0  standalone.o(i.__user_setup_stackheap)
+    i._sys_exit                              0x8000378c   Section        0  standalone.o(i._sys_exit)
+    i.arm32_dcache_disable                   0x80003790   Section        0  arm32.o(i.arm32_dcache_disable)
+    i.arm32_dcache_enable                    0x800037a8   Section        0  arm32.o(i.arm32_dcache_enable)
+    i.arm32_domain_set                       0x800037c0   Section        0  arm32.o(i.arm32_domain_set)
+    i.arm32_icache_disable                   0x800037c8   Section        0  arm32.o(i.arm32_icache_disable)
+    i.arm32_icache_enable                    0x800037e0   Section        0  arm32.o(i.arm32_icache_enable)
+    i.arm32_mmu_disable                      0x800037f8   Section        0  arm32.o(i.arm32_mmu_disable)
+    i.arm32_mmu_enable                       0x80003810   Section        0  arm32.o(i.arm32_mmu_enable)
+    i.arm32_read_p15_c1                      0x80003828   Section        0  arm32.o(i.arm32_read_p15_c1)
+    i.arm32_tlb_invalidate                   0x80003830   Section        0  arm32.o(i.arm32_tlb_invalidate)
+    i.arm32_ttb_set                          0x80003844   Section        0  arm32.o(i.arm32_ttb_set)
+    i.arm32_write_p15_c1                     0x8000384c   Section        0  arm32.o(i.arm32_write_p15_c1)
+    i.delay_ms                               0x80003854   Section        0  sys_delay.o(i.delay_ms)
+    i.delay_us                               0x8000388c   Section        0  sys_delay.o(i.delay_us)
+    i.f1c100s_clk_init                       0x800038c4   Section        0  sys_tvd.o(i.f1c100s_clk_init)
+    i.f1c100s_tvd_Init                       0x8000394c   Section        0  sys_tvd.o(i.f1c100s_tvd_Init)
+    i.f1c100s_tvd_init                       0x800039a0   Section        0  sys_tvd.o(i.f1c100s_tvd_init)
+    i.main                                   0x80003a48   Section        0  main.o(i.main)
+    i.map_l1_section                         0x80003ac8   Section        0  sys_mmu.o(i.map_l1_section)
+    map_l1_section                           0x80003ac8   ARM Code     140  sys_mmu.o(i.map_l1_section)
+    i.set_video_window                       0x80003b54   Section        0  sys_lcd.o(i.set_video_window)
+    i.sysFlushCache                          0x80003b7c   Section        0  sys_cache.o(i.sysFlushCache)
+    i.sysSetLocalInterrupt                   0x80003bc4   Section        0  sys_interrupt.o(i.sysSetLocalInterrupt)
+    i.sys_mmu_init                           0x80003c24   Section        0  sys_mmu.o(i.sys_mmu_init)
+    i.sysprintf                              0x80003d2c   Section        0  sys_uart.o(i.sysprintf)
+    .data                                    0x80003df4   Section       52  sys_uart.o(.data)
+    .data                                    0x80003e28   Section      332  sys_interrupt.o(.data)
+    .data                                    0x80003f74   Section        4  sys_timer.o(.data)
+    .data                                    0x80003f78   Section       80  sys_lcd.o(.data)
+    video_layer_inx                          0x80003f78   Data           4  sys_lcd.o(.data)
+    .data                                    0x80003fc8   Section    15128  sys_defe.o(.data)
+    de_scal_trd_fp_en                        0x80003fc8   Data           4  sys_defe.o(.data)
+    de_scal_trd_itl_en                       0x80003fcc   Data           4  sys_defe.o(.data)
+    scal_dev                                 0x80003fd0   Data           4  sys_defe.o(.data)
+    de_scal_ch0_offset                       0x80003fd4   Data           4  sys_defe.o(.data)
+    de_scal_ch1_offset                       0x80003fd8   Data           4  sys_defe.o(.data)
+    de_scal_ch2_offset                       0x80003fdc   Data           4  sys_defe.o(.data)
+    .data                                    0x80007ae0   Section       20  sys_tvd.o(.data)
+    buff_n                                   0x80007ae4   Data           4  sys_tvd.o(.data)
+    sn                                       0x80007ae8   Data           4  sys_tvd.o(.data)
+    .bss                                     0x80007c00   Section    3072000  main.o(.bss)
+    .bss                                     0x802f8000   Section    16384  sys_mmu.o(.bss)
+    .bss                                     0x802fc000   Section       48  sys_lcd.o(.bss)
+    .bss                                     0x802fc040   Section    2488320  sys_tvd.o(.bss)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv2$ARM_ISAv5$E$P$J$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    Reset_Go                                 0x80000000   ARM Code       0  sys_start.o(F1C100S_INIT)
+    __main                                   0x80000060   ARM Code       8  __main.o(!!!main)
+    __scatterload                            0x80000068   ARM Code       0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x80000068   ARM Code      52  __scatter.o(!!!scatter)
+    __scatterload_null                       0x8000007c   ARM Code       0  __scatter.o(!!!scatter)
+    __decompress                             0x800000a4   ARM Code      96  __dclz77c.o(!!dclz77c)
+    __decompress2                            0x800000a4   ARM Code       0  __dclz77c.o(!!dclz77c)
+    __scatterload_copy                       0x80000104   ARM Code      40  __scatter_copy.o(!!handler_copy)
+    __scatterload_zeroinit                   0x8000012c   ARM Code      44  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x80000159   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_1                       0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x8000015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x8000015d   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x8000015f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x8000015f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x8000015f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x8000015f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x8000015f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x8000015f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x8000015f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x80000160   ARM Code       0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x80000160   ARM Code       0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x80000160   ARM Code       0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x80000168   ARM Code       0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x80000168   ARM Code       0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x8000016c   ARM Code       0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x8000016c   ARM Code       0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x80000194   ARM Code       0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x80000198   ARM Code       0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x80000198   ARM Code       0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x8000019c   ARM Code       0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    __aeabi_llsl                             0x800001a4   ARM Code       0  llshl.o(.text)
+    _ll_shift_l                              0x800001a4   ARM Code      40  llshl.o(.text)
+    strlen                                   0x800001cd   Thumb Code    62  strlen.o(.text)
+    __aeabi_idiv                             0x80000210   ARM Code       0  aeabi_sdivfast.o(.text)
+    __aeabi_idivmod                          0x80000210   ARM Code     552  aeabi_sdivfast.o(.text)
+    exit                                     0x80000439   Thumb Code    16  exit.o(.text)
+    __aeabi_uidiv                            0x80000448   ARM Code       0  aeabi_sdivfast.o(.text_udiv)
+    __aeabi_uidivmod                         0x80000448   ARM Code      48  aeabi_sdivfast.o(.text_udiv)
+    sysSetupCP15                             0x80000478   ARM Code       0  sys_ctl.o(SYS_INIT)
+    sys_flush_and_clean_dcache               0x8000049c   ARM Code       0  sys_ctl.o(SYS_INIT)
+    Vector_Table                             0x800004a8   ARM Code       0  vectors.o(Vect)
+    AVS_Time_Init                            0x8000053c   ARM Code     100  sys_timer.o(i.AVS_Time_Init)
+    AVS_Time_Init_x                          0x800005ac   ARM Code      92  sys_timer.o(i.AVS_Time_Init_x)
+    AVS_Time_Read                            0x80000614   ARM Code      48  sys_timer.o(i.AVS_Time_Read)
+    AVS_Time_Start                           0x8000064c   ARM Code      72  sys_timer.o(i.AVS_Time_Start)
+    BSP_TVD_config                           0x800006a0   ARM Code    1476  sys_tvd.o(i.BSP_TVD_config)
+    DE_SCAL_Config_Src                       0x80000c80   ARM Code    2012  sys_defe.o(i.DE_SCAL_Config_Src)
+    DE_SCAL_Set_CSC_Coef                     0x8000146c   ARM Code     260  sys_defe.o(i.DE_SCAL_Set_CSC_Coef)
+    DE_SCAL_Set_Init_Phase                   0x80001578   ARM Code     964  sys_defe.o(i.DE_SCAL_Set_Init_Phase)
+    DE_SCAL_Set_Out_Size                     0x80001944   ARM Code     276  sys_defe.o(i.DE_SCAL_Set_Out_Size)
+    DE_SCAL_Set_Scaling_Coef                 0x80001a5c   ARM Code    1000  sys_defe.o(i.DE_SCAL_Set_Scaling_Coef)
+    DE_SCAL_Set_Scaling_Coef_for_video       0x80001e4c   ARM Code    1088  sys_defe.o(i.DE_SCAL_Set_Scaling_Coef_for_video)
+    DE_SCAL_Set_Scaling_Factor               0x80002294   ARM Code     356  sys_defe.o(i.DE_SCAL_Set_Scaling_Factor)
+    Debe_Init                                0x800023fc   ARM Code     376  sys_lcd.o(i.Debe_Init)
+    Defe_Config                              0x8000257c   ARM Code     108  sys_defe.o(i.Defe_Config)
+    Defe_Config_video_uvcombined_yuv422_to_argb_x 0x800025f0   ARM Code     432  sys_defe.o(i.Defe_Config_video_uvcombined_yuv422_to_argb_x)
+    Defe_Init                                0x800027a4   ARM Code     120  sys_defe.o(i.Defe_Init)
+    Defe_Start                               0x80002828   ARM Code      24  sys_defe.o(i.Defe_Start)
+    Enable_Layer_Video                       0x80002844   ARM Code      28  sys_lcd.o(i.Enable_Layer_Video)
+    F1C100S_Interrupt_Shell                  0x80002864   ARM Code       4  sys_interrupt.o(i.F1C100S_Interrupt_Shell)
+    F1C100S_LCD_Config                       0x80002868   ARM Code     184  sys_lcd.o(i.F1C100S_LCD_Config)
+    GPIO_Config                              0x80002ce8   ARM Code     144  sys_gpio.o(i.GPIO_Config)
+    IRQ_Handler2                             0x80002d78   ARM Code      16  sys_interrupt.o(i.IRQ_Handler2)
+    IRQ_Init                                 0x80002d8c   ARM Code     180  sys_interrupt.o(i.IRQ_Init)
+    LCD_IO_Init                              0x80002e58   ARM Code     556  sys_lcd.o(i.LCD_IO_Init)
+    Open_Dev_Clock                           0x80003090   ARM Code     124  sys_clock.o(i.Open_Dev_Clock)
+    SWI_Handler2                             0x80003118   ARM Code       4  sys_interrupt.o(i.SWI_Handler2)
+    Set_LayerX_window                        0x8000311c   ARM Code     136  sys_lcd.o(i.Set_LayerX_window)
+    Set_Layer_format                         0x800031a8   ARM Code      40  sys_lcd.o(i.Set_Layer_format)
+    Sys_Clock_Init                           0x800031d8   ARM Code     340  sys_clock.o(i.Sys_Clock_Init)
+    Sys_LCD_Init                             0x80003368   ARM Code      92  sys_lcd.o(i.Sys_LCD_Init)
+    Sys_TimerX_Init                          0x800033cc   ARM Code      84  sys_timer.o(i.Sys_TimerX_Init)
+    Sys_Uart_Put                             0x80003424   ARM Code      56  sys_uart.o(i.Sys_Uart_Put)
+    TIMER1_ISR                               0x80003468   ARM Code      48  sys_timer.o(i.TIMER1_ISR)
+    Tcon_Init                                0x800034a0   ARM Code     576  sys_lcd.o(i.Tcon_Init)
+    Timer_Init                               0x80003710   ARM Code     100  sys_timer.o(i.Timer_Init)
+    __user_setup_stackheap                   0x80003780   ARM Code       8  standalone.o(i.__user_setup_stackheap)
+    _sys_exit                                0x8000378c   ARM Code       4  standalone.o(i._sys_exit)
+    arm32_dcache_disable                     0x80003790   ARM Code      24  arm32.o(i.arm32_dcache_disable)
+    arm32_dcache_enable                      0x800037a8   ARM Code      24  arm32.o(i.arm32_dcache_enable)
+    arm32_domain_set                         0x800037c0   ARM Code       8  arm32.o(i.arm32_domain_set)
+    arm32_icache_disable                     0x800037c8   ARM Code      24  arm32.o(i.arm32_icache_disable)
+    arm32_icache_enable                      0x800037e0   ARM Code      24  arm32.o(i.arm32_icache_enable)
+    arm32_mmu_disable                        0x800037f8   ARM Code      24  arm32.o(i.arm32_mmu_disable)
+    arm32_mmu_enable                         0x80003810   ARM Code      24  arm32.o(i.arm32_mmu_enable)
+    arm32_read_p15_c1                        0x80003828   ARM Code       8  arm32.o(i.arm32_read_p15_c1)
+    arm32_tlb_invalidate                     0x80003830   ARM Code      20  arm32.o(i.arm32_tlb_invalidate)
+    arm32_ttb_set                            0x80003844   ARM Code       8  arm32.o(i.arm32_ttb_set)
+    arm32_write_p15_c1                       0x8000384c   ARM Code       8  arm32.o(i.arm32_write_p15_c1)
+    delay_ms                                 0x80003854   ARM Code      56  sys_delay.o(i.delay_ms)
+    delay_us                                 0x8000388c   ARM Code      56  sys_delay.o(i.delay_us)
+    f1c100s_clk_init                         0x800038c4   ARM Code     124  sys_tvd.o(i.f1c100s_clk_init)
+    f1c100s_tvd_Init                         0x8000394c   ARM Code      84  sys_tvd.o(i.f1c100s_tvd_Init)
+    f1c100s_tvd_init                         0x800039a0   ARM Code     148  sys_tvd.o(i.f1c100s_tvd_init)
+    main                                     0x80003a48   ARM Code     112  main.o(i.main)
+    set_video_window                         0x80003b54   ARM Code      36  sys_lcd.o(i.set_video_window)
+    sysFlushCache                            0x80003b7c   ARM Code      72  sys_cache.o(i.sysFlushCache)
+    sysSetLocalInterrupt                     0x80003bc4   ARM Code      96  sys_interrupt.o(i.sysSetLocalInterrupt)
+    sys_mmu_init                             0x80003c24   ARM Code     260  sys_mmu.o(i.sys_mmu_init)
+    sysprintf                                0x80003d2c   ARM Code     144  sys_uart.o(i.sysprintf)
+    Region$$Table$$Base                      0x80003dc4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x80003df4   Number         0  anon$$obj.o(Region$$Table)
+    UART_DBG                                 0x80003df4   Data           4  sys_uart.o(.data)
+    uart_cd                                  0x80003df8   Data          48  sys_uart.o(.data)
+    _sys_bIsAICInitial                       0x80003e28   Data           1  sys_interrupt.o(.data)
+    sysIrqHandlerTable                       0x80003e2c   Data         164  sys_interrupt.o(.data)
+    sysFiqHandlerTable                       0x80003ed0   Data         164  sys_interrupt.o(.data)
+    sys_count_timer                          0x80003f74   Data           4  sys_timer.o(.data)
+    lcd_pdat                                 0x80003f7c   Data           4  sys_lcd.o(.data)
+    lcd_timing                               0x80003f80   Data          72  sys_lcd.o(.data)
+    csc_tab                                  0x80003fe0   Data         768  sys_defe.o(.data)
+    fir_tab                                  0x800042e0   Data        7168  sys_defe.o(.data)
+    fir_tab_video                            0x80005ee0   Data        7168  sys_defe.o(.data)
+    TVD_IN_SEL                               0x80007ae0   Data           4  sys_tvd.o(.data)
+    mode                                     0x80007aec   Data           4  sys_tvd.o(.data)
+    tmode                                    0x80007af0   Data           4  sys_tvd.o(.data)
+    LCDbuff1                                 0x80007c00   Data       1536000  main.o(.bss)
+    LCDbuff2                                 0x8017ec00   Data       1536000  main.o(.bss)
+    mmuTable                                 0x802f8000   Data       16384  sys_mmu.o(.bss)
+    __lcd_pdat                               0x802fc000   Data          48  sys_lcd.o(.bss)
+    buff_y                                   0x802fc040   Data       1244160  sys_tvd.o(.bss)
+    buff_c                                   0x8042bc40   Data       1244160  sys_tvd.o(.bss)
+    Image$$RW_RAM1$$ZI$$Limit                0x8055b840   Number         0  anon$$obj.o ABSOLUTE
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x80000000
+
+  Load Region LR_IROM1 (Base: 0x80000000, Size: 0x00007af4, Max: 0x02000000, ABSOLUTE, COMPRESSED[0x00005820])
+
+    Execution Region ER_IROM1 (Exec base: 0x80000000, Load base: 0x80000000, Size: 0x00003df4, Max: 0x02000000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x80000000   0x80000000   0x00000060   Code   RO           96  * F1C100S_INIT        sys_start.o
+    0x80000060   0x80000060   0x00000008   Code   RO         1477  * !!!main             c_5.l(__main.o)
+    0x80000068   0x80000068   0x0000003c   Code   RO         1637    !!!scatter          c_5.l(__scatter.o)
+    0x800000a4   0x800000a4   0x00000060   Code   RO         1635    !!dclz77c           c_5.l(__dclz77c.o)
+    0x80000104   0x80000104   0x00000028   Code   RO         1639    !!handler_copy      c_5.l(__scatter_copy.o)
+    0x8000012c   0x8000012c   0x0000002c   Code   RO         1641    !!handler_zi        c_5.l(__scatter_zi.o)
+    0x80000158   0x80000158   0x00000002   Code   RO         1512    .ARM.Collect$$libinit$$00000000  c_5.l(libinit.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1522    .ARM.Collect$$libinit$$00000002  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1524    .ARM.Collect$$libinit$$00000004  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1527    .ARM.Collect$$libinit$$0000000A  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1529    .ARM.Collect$$libinit$$0000000C  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1531    .ARM.Collect$$libinit$$0000000E  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1534    .ARM.Collect$$libinit$$00000011  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1536    .ARM.Collect$$libinit$$00000013  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1538    .ARM.Collect$$libinit$$00000015  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1540    .ARM.Collect$$libinit$$00000017  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1542    .ARM.Collect$$libinit$$00000019  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1544    .ARM.Collect$$libinit$$0000001B  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1546    .ARM.Collect$$libinit$$0000001D  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1548    .ARM.Collect$$libinit$$0000001F  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1550    .ARM.Collect$$libinit$$00000021  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1552    .ARM.Collect$$libinit$$00000023  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1554    .ARM.Collect$$libinit$$00000025  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1558    .ARM.Collect$$libinit$$0000002C  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1560    .ARM.Collect$$libinit$$0000002E  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1562    .ARM.Collect$$libinit$$00000030  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000000   Code   RO         1564    .ARM.Collect$$libinit$$00000032  c_5.l(libinit2.o)
+    0x8000015a   0x8000015a   0x00000002   Code   RO         1565    .ARM.Collect$$libinit$$00000033  c_5.l(libinit2.o)
+    0x8000015c   0x8000015c   0x00000002   Code   RO         1589    .ARM.Collect$$libshutdown$$00000000  c_5.l(libshutdown.o)
+    0x8000015e   0x8000015e   0x00000000   Code   RO         1615    .ARM.Collect$$libshutdown$$00000002  c_5.l(libshutdown2.o)
+    0x8000015e   0x8000015e   0x00000000   Code   RO         1617    .ARM.Collect$$libshutdown$$00000004  c_5.l(libshutdown2.o)
+    0x8000015e   0x8000015e   0x00000000   Code   RO         1620    .ARM.Collect$$libshutdown$$00000007  c_5.l(libshutdown2.o)
+    0x8000015e   0x8000015e   0x00000000   Code   RO         1623    .ARM.Collect$$libshutdown$$0000000A  c_5.l(libshutdown2.o)
+    0x8000015e   0x8000015e   0x00000000   Code   RO         1625    .ARM.Collect$$libshutdown$$0000000C  c_5.l(libshutdown2.o)
+    0x8000015e   0x8000015e   0x00000000   Code   RO         1628    .ARM.Collect$$libshutdown$$0000000F  c_5.l(libshutdown2.o)
+    0x8000015e   0x8000015e   0x00000002   Code   RO         1629    .ARM.Collect$$libshutdown$$00000010  c_5.l(libshutdown2.o)
+    0x80000160   0x80000160   0x00000000   Code   RO         1479    .ARM.Collect$$rtentry$$00000000  c_5.l(__rtentry.o)
+    0x80000160   0x80000160   0x00000000   Code   RO         1485    .ARM.Collect$$rtentry$$00000002  c_5.l(__rtentry2.o)
+    0x80000160   0x80000160   0x00000008   Code   RO         1497    .ARM.Collect$$rtentry$$00000004  c_5.l(__rtentry4.o)
+    0x80000168   0x80000168   0x00000000   Code   RO         1487    .ARM.Collect$$rtentry$$00000009  c_5.l(__rtentry2.o)
+    0x80000168   0x80000168   0x00000004   Code   RO         1488    .ARM.Collect$$rtentry$$0000000A  c_5.l(__rtentry2.o)
+    0x8000016c   0x8000016c   0x00000000   Code   RO         1490    .ARM.Collect$$rtentry$$0000000C  c_5.l(__rtentry2.o)
+    0x8000016c   0x8000016c   0x00000028   Code   RO         1491    .ARM.Collect$$rtentry$$0000000D  c_5.l(__rtentry2.o)
+    0x80000194   0x80000194   0x00000004   Code   RO         1513    .ARM.Collect$$rtexit$$00000000  c_5.l(rtexit.o)
+    0x80000198   0x80000198   0x00000000   Code   RO         1567    .ARM.Collect$$rtexit$$00000002  c_5.l(rtexit2.o)
+    0x80000198   0x80000198   0x00000004   Code   RO         1568    .ARM.Collect$$rtexit$$00000003  c_5.l(rtexit2.o)
+    0x8000019c   0x8000019c   0x00000008   Code   RO         1569    .ARM.Collect$$rtexit$$00000004  c_5.l(rtexit2.o)
+    0x800001a4   0x800001a4   0x00000028   Code   RO         1457    .text               c_5.l(llshl.o)
+    0x800001cc   0x800001cc   0x00000044   Code   RO         1459    .text               c_5.l(strlen.o)
+    0x80000210   0x80000210   0x00000228   Code   RO         1461    .text               c_5.l(aeabi_sdivfast.o)
+    0x80000438   0x80000438   0x00000010   Code   RO         1501    .text               c_5.l(exit.o)
+    0x80000448   0x80000448   0x00000030   Code   RO         1462    .text_udiv          c_5.l(aeabi_sdivfast.o)
+    0x80000478   0x80000478   0x00000030   Code   RO          302    SYS_INIT            sys_ctl.o
+    0x800004a8   0x800004a8   0x00000094   Code   RO          100    Vect                vectors.o
+    0x8000053c   0x8000053c   0x00000070   Code   RO          374    i.AVS_Time_Init     sys_timer.o
+    0x800005ac   0x800005ac   0x00000068   Code   RO          375    i.AVS_Time_Init_x   sys_timer.o
+    0x80000614   0x80000614   0x00000038   Code   RO          377    i.AVS_Time_Read     sys_timer.o
+    0x8000064c   0x8000064c   0x00000054   Code   RO          379    i.AVS_Time_Start    sys_timer.o
+    0x800006a0   0x800006a0   0x000005e0   Code   RO         1095    i.BSP_TVD_config    sys_tvd.o
+    0x80000c80   0x80000c80   0x000007ec   Code   RO          780    i.DE_SCAL_Config_Src  sys_defe.o
+    0x8000146c   0x8000146c   0x0000010c   Code   RO          786    i.DE_SCAL_Set_CSC_Coef  sys_defe.o
+    0x80001578   0x80001578   0x000003cc   Code   RO          788    i.DE_SCAL_Set_Init_Phase  sys_defe.o
+    0x80001944   0x80001944   0x00000118   Code   RO          790    i.DE_SCAL_Set_Out_Size  sys_defe.o
+    0x80001a5c   0x80001a5c   0x000003f0   Code   RO          793    i.DE_SCAL_Set_Scaling_Coef  sys_defe.o
+    0x80001e4c   0x80001e4c   0x00000448   Code   RO          794    i.DE_SCAL_Set_Scaling_Coef_for_video  sys_defe.o
+    0x80002294   0x80002294   0x00000168   Code   RO          795    i.DE_SCAL_Set_Scaling_Factor  sys_defe.o
+    0x800023fc   0x800023fc   0x00000180   Code   RO          660    i.Debe_Init         sys_lcd.o
+    0x8000257c   0x8000257c   0x00000074   Code   RO          797    i.Defe_Config       sys_defe.o
+    0x800025f0   0x800025f0   0x000001b4   Code   RO          798    i.Defe_Config_video_uvcombined_yuv422_to_argb_x  sys_defe.o
+    0x800027a4   0x800027a4   0x00000084   Code   RO          801    i.Defe_Init         sys_defe.o
+    0x80002828   0x80002828   0x0000001c   Code   RO          802    i.Defe_Start        sys_defe.o
+    0x80002844   0x80002844   0x00000020   Code   RO          662    i.Enable_Layer_Video  sys_lcd.o
+    0x80002864   0x80002864   0x00000004   Code   RO          305    i.F1C100S_Interrupt_Shell  sys_interrupt.o
+    0x80002868   0x80002868   0x000000c8   Code   RO          663    i.F1C100S_LCD_Config  sys_lcd.o
+    0x80002930   0x80002930   0x000003b8   Code   RO          162    i.FormatItem        sys_uart.o
+    0x80002ce8   0x80002ce8   0x00000090   Code   RO         1327    i.GPIO_Config       sys_gpio.o
+    0x80002d78   0x80002d78   0x00000014   Code   RO          309    i.IRQ_Handler2      sys_interrupt.o
+    0x80002d8c   0x80002d8c   0x000000cc   Code   RO          310    i.IRQ_Init          sys_interrupt.o
+    0x80002e58   0x80002e58   0x00000238   Code   RO          664    i.LCD_IO_Init       sys_lcd.o
+    0x80003090   0x80003090   0x00000088   Code   RO          104    i.Open_Dev_Clock    sys_clock.o
+    0x80003118   0x80003118   0x00000004   Code   RO          311    i.SWI_Handler2      sys_interrupt.o
+    0x8000311c   0x8000311c   0x0000008c   Code   RO          665    i.Set_LayerX_window  sys_lcd.o
+    0x800031a8   0x800031a8   0x00000030   Code   RO          666    i.Set_Layer_format  sys_lcd.o
+    0x800031d8   0x800031d8   0x00000190   Code   RO          105    i.Sys_Clock_Init    sys_clock.o
+    0x80003368   0x80003368   0x00000064   Code   RO          667    i.Sys_LCD_Init      sys_lcd.o
+    0x800033cc   0x800033cc   0x00000058   Code   RO          383    i.Sys_TimerX_Init   sys_timer.o
+    0x80003424   0x80003424   0x00000044   Code   RO          165    i.Sys_Uart_Put      sys_uart.o
+    0x80003468   0x80003468   0x00000038   Code   RO          385    i.TIMER1_ISR        sys_timer.o
+    0x800034a0   0x800034a0   0x00000270   Code   RO          670    i.Tcon_Init         sys_lcd.o
+    0x80003710   0x80003710   0x00000070   Code   RO          389    i.Timer_Init        sys_timer.o
+    0x80003780   0x80003780   0x0000000c   Code   RO           70    i.__user_setup_stackheap  standalone.o
+    0x8000378c   0x8000378c   0x00000004   Code   RO           71    i._sys_exit         standalone.o
+    0x80003790   0x80003790   0x00000018   Code   RO          560    i.arm32_dcache_disable  arm32.o
+    0x800037a8   0x800037a8   0x00000018   Code   RO          561    i.arm32_dcache_enable  arm32.o
+    0x800037c0   0x800037c0   0x00000008   Code   RO          562    i.arm32_domain_set  arm32.o
+    0x800037c8   0x800037c8   0x00000018   Code   RO          563    i.arm32_icache_disable  arm32.o
+    0x800037e0   0x800037e0   0x00000018   Code   RO          564    i.arm32_icache_enable  arm32.o
+    0x800037f8   0x800037f8   0x00000018   Code   RO          565    i.arm32_mmu_disable  arm32.o
+    0x80003810   0x80003810   0x00000018   Code   RO          566    i.arm32_mmu_enable  arm32.o
+    0x80003828   0x80003828   0x00000008   Code   RO          568    i.arm32_read_p15_c1  arm32.o
+    0x80003830   0x80003830   0x00000014   Code   RO          569    i.arm32_tlb_invalidate  arm32.o
+    0x80003844   0x80003844   0x00000008   Code   RO          570    i.arm32_ttb_set     arm32.o
+    0x8000384c   0x8000384c   0x00000008   Code   RO          571    i.arm32_write_p15_c1  arm32.o
+    0x80003854   0x80003854   0x00000038   Code   RO          284    i.delay_ms          sys_delay.o
+    0x8000388c   0x8000388c   0x00000038   Code   RO          285    i.delay_us          sys_delay.o
+    0x800038c4   0x800038c4   0x00000088   Code   RO         1111    i.f1c100s_clk_init  sys_tvd.o
+    0x8000394c   0x8000394c   0x00000054   Code   RO         1113    i.f1c100s_tvd_Init  sys_tvd.o
+    0x800039a0   0x800039a0   0x000000a8   Code   RO         1114    i.f1c100s_tvd_init  sys_tvd.o
+    0x80003a48   0x80003a48   0x00000080   Code   RO            1    i.main              main.o
+    0x80003ac8   0x80003ac8   0x0000008c   Code   RO          488    i.map_l1_section    sys_mmu.o
+    0x80003b54   0x80003b54   0x00000028   Code   RO          675    i.set_video_window  sys_lcd.o
+    0x80003b7c   0x80003b7c   0x00000048   Code   RO          638    i.sysFlushCache     sys_cache.o
+    0x80003bc4   0x80003bc4   0x00000060   Code   RO          314    i.sysSetLocalInterrupt  sys_interrupt.o
+    0x80003c24   0x80003c24   0x00000108   Code   RO          493    i.sys_mmu_init      sys_mmu.o
+    0x80003d2c   0x80003d2c   0x00000098   Code   RO          177    i.sysprintf         sys_uart.o
+    0x80003dc4   0x80003dc4   0x00000030   Data   RO         1633    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_RAM1 (Exec base: 0x80003df4, Load base: 0x80003df4, Size: 0x00557a4c, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x00001a2c])
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x80003df4   COMPRESSED   0x00000034   Data   RW          181    .data               sys_uart.o
+    0x80003e28   COMPRESSED   0x0000014c   Data   RW          315    .data               sys_interrupt.o
+    0x80003f74   COMPRESSED   0x00000004   Data   RW          392    .data               sys_timer.o
+    0x80003f78   COMPRESSED   0x00000050   Data   RW          677    .data               sys_lcd.o
+    0x80003fc8   COMPRESSED   0x00003b18   Data   RW          803    .data               sys_defe.o
+    0x80007ae0   COMPRESSED   0x00000014   Data   RW         1119    .data               sys_tvd.o
+    0x80007af4   COMPRESSED   0x0000010c   PAD
+    0x80007c00        -       0x002ee000   Zero   RW            2    .bss                main.o
+    0x802f5c00   COMPRESSED   0x00002400   PAD
+    0x802f8000        -       0x00004000   Zero   RW          498    .bss                sys_mmu.o
+    0x802fc000        -       0x00000030   Zero   RW          676    .bss                sys_lcd.o
+    0x802fc030   COMPRESSED   0x00000010   PAD
+    0x802fc040        -       0x0025f800   Zero   RW         1116    .bss                sys_tvd.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       196          0          0          0          0       5328   arm32.o
+       128         16          0          0    3072000      25351   main.o
+        16          4          0          0          0       1481   standalone.o
+        72          0          0          0          0        604   sys_cache.o
+       536         72          0          0          0       4733   sys_clock.o
+        48          0          0          0          0        280   sys_ctl.o
+      6724         84          0      15128          0      17939   sys_defe.o
+       112          0          0          0          0        982   sys_delay.o
+       144          0          0          0          0       1154   sys_gpio.o
+       328         60          0        332          0       4165   sys_interrupt.o
+      2136        112          0         80         48      16674   sys_lcd.o
+       404          4          0          0      16384       7658   sys_mmu.o
+        96         20          0          0          0        324   sys_start.o
+       612         68          0          4          0       6633   sys_timer.o
+      1892        260          0         20    2488320       7854   sys_tvd.o
+      1172         24          0         52          0       7339   sys_uart.o
+       148         32          0          0          0        312   vectors.o
+
+    ----------------------------------------------------------------------
+     14764        756         48      15616    5586252     108811   Object Totals
+         0          0         48          0          0          0   (incl. Generated)
+         0          0          0          0       9500          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        96          2          0          0          0          0   __dclz77c.o
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        44          4          0          0          0          0   __rtentry2.o
+         8          0          0          0          0          0   __rtentry4.o
+        60          8          0          0          0          0   __scatter.o
+        40          0          0          0          0          0   __scatter_copy.o
+        44          0          0          0          0          0   __scatter_zi.o
+       600          0          0          0          0        144   aeabi_sdivfast.o
+        16          0          0          0          0         68   exit.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+        40          0          0          0          0         68   llshl.o
+         4          0          0          0          0          0   rtexit.o
+        12          0          0          0          0          0   rtexit2.o
+        68          6          0          0          0         72   strlen.o
+
+    ----------------------------------------------------------------------
+      1048         20          0          0          0        420   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1048         20          0          0          0        420   c_5.l
+
+    ----------------------------------------------------------------------
+      1048         20          0          0          0        420   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     15812        776         48      15616    5586252     106599   Grand Totals
+     15812        776         48       6700    5586252     106599   ELF Image Totals (compressed)
+     15812        776         48       6700          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                15860 (  15.49kB)
+    Total RW  Size (RW Data + ZI Data)           5601868 (5470.57kB)
+    Total ROM Size (Code + RO Data + RW Data)      22560 (  22.03kB)
+
+==============================================================================
+

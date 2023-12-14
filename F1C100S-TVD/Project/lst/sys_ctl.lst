@@ -1,0 +1,95 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000         
+    3 00000000                 AREA             SYS_INIT, CODE, READONLY
+    4 00000000         
+    5 00000000                 EXPORT           sysSetupCP15
+    6 00000000                 EXPORT           sys_flush_and_clean_dcache
+    7 00000000         
+    8 00000000         sysSetupCP15
+    9 00000000         
+   10 00000000 E1A01000        MOV              r1, r0      ; _mmuSectionTable
+   11 00000004 EE021F10        MCR              p15, 0, r1, c2, c0, 0 ; write t
+                                                            ranslation table ba
+                                                            se register c2
+   12 00000008         
+   13 00000008 E3A01001        MOV              r1, #0x00000001
+   14 0000000C EE031F10        MCR              p15, 0, r1, c3, c0, 0 ; domain 
+                                                            access control regi
+                                                            ster c3
+   15 00000010         
+   16 00000010 EE111F10        MRC              p15, 0, r1, c1, c0, 0 ; read co
+                                                            ntrol register c1 ¶
+                                                            Á³öC1µ½R1
+   17 00000014 E3811A01        ORR              r1, r1, #0x1000 ; set enable ic
+                                                            ache bit
+   18 00000018 E3811005        ORR              r1, r1, #0x5 ; set enable dcach
+                                                            e and MMU bits [mmu
+                                                            ÎªÊ²Ã´²»ÄÜÐ´Ê¹ÄÜ]
+   19 0000001C EE011F10        MCR              p15, 0, r1, c1, c0, 0 ; write c
+                                                            ontrol regiser c1
+   20 00000020         
+   21 00000020 E12FFF1E        BX               r14
+   22 00000024         
+   23 00000024         sys_flush_and_clean_dcache
+   24 00000024         
+   25 00000024         tci_loop
+   26 00000024 EE17FF7E        MRC              p15, 0, r15, c7, c14, 3 ; test 
+                                                            clean and invalidat
+                                                            e
+   27 00000028 1AFFFFFD        BNE              tci_loop
+   28 0000002C         
+   29 0000002C E12FFF1E        BX               r14
+   30 00000030         
+   31 00000030         
+   32 00000030                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM926EJ-S --apcs=inter
+work --depend=.\obj\sys_ctl.d -o.\obj\sys_ctl.o -ID:\01_SoftWare\keil5\ARM\RV31
+\INC -ID:\01_SoftWare\keil5\ARM\CMSIS\Include -ID:\01_SoftWare\keil5\ARM\INC\To
+shiba --predefine="__UVISION_VERSION SETA 528" --list=.\lst\sys_ctl.lst ..\Driv
+er\Source\sys_ctl.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+SYS_INIT 00000000
+
+Symbol: SYS_INIT
+   Definitions
+      At line 3 in file ..\Driver\Source\sys_ctl.s
+   Uses
+      None
+Comment: SYS_INIT unused
+sysSetupCP15 00000000
+
+Symbol: sysSetupCP15
+   Definitions
+      At line 8 in file ..\Driver\Source\sys_ctl.s
+   Uses
+      At line 5 in file ..\Driver\Source\sys_ctl.s
+Comment: sysSetupCP15 used once
+sys_flush_and_clean_dcache 00000024
+
+Symbol: sys_flush_and_clean_dcache
+   Definitions
+      At line 23 in file ..\Driver\Source\sys_ctl.s
+   Uses
+      At line 6 in file ..\Driver\Source\sys_ctl.s
+Comment: sys_flush_and_clean_dcache used once
+tci_loop 00000024
+
+Symbol: tci_loop
+   Definitions
+      At line 25 in file ..\Driver\Source\sys_ctl.s
+   Uses
+      At line 27 in file ..\Driver\Source\sys_ctl.s
+Comment: tci_loop used once
+4 symbols
+335 symbols in table

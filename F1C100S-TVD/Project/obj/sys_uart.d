@@ -1,0 +1,10 @@
+.\obj\sys_uart.o: ..\Driver\Source\sys_uart.c
+.\obj\sys_uart.o: ..\Driver\Include\sys_uart.h
+.\obj\sys_uart.o: ..\Driver\Include\sys_clock.h
+.\obj\sys_uart.o: ..\Driver\Include\sys_types.h
+.\obj\sys_uart.o: ..\Driver\Include\sys_io.h
+.\obj\sys_uart.o: ..\Driver\Include\sys_gpio.h
+.\obj\sys_uart.o: D:\01_SoftWare\keil5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\sys_uart.o: D:\01_SoftWare\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\sys_uart.o: ..\Driver\Include\sys_interrupt.h
+.\obj\sys_uart.o: ..\Driver\Include\sys_delay.h

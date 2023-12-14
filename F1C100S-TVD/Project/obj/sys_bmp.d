@@ -1,0 +1,12 @@
+.\obj\sys_bmp.o: ..\USR\bmp\sys_bmp.c
+.\obj\sys_bmp.o: ..\Driver\Include\sys_uart.h
+.\obj\sys_bmp.o: ..\Driver\Include\sys_clock.h
+.\obj\sys_bmp.o: ..\Driver\Include\sys_types.h
+.\obj\sys_bmp.o: ..\Driver\Include\sys_io.h
+.\obj\sys_bmp.o: ..\Driver\Include\sys_delay.h
+.\obj\sys_bmp.o: D:\01_SoftWare\keil5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\sys_bmp.o: ..\USR\bmp\sys_bmp.h
+.\obj\sys_bmp.o: ..\Driver\Include\sys_lcd_conf.h
+.\obj\sys_bmp.o: D:\01_SoftWare\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\sys_bmp.o: ..\Driver\Include\sys_cache.h
+.\obj\sys_bmp.o: ..\Driver\Include\sys_tvd.h

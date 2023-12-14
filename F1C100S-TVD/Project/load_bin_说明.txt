@@ -1,0 +1,8 @@
+【1】..\Project下的bin文件为烧写到FLASH的文件，用于下载到FLASH。
+【2】..\Project\obj下的bin文件为烧写到dram的文件，不能用于下载到FLASH。
+【3】EXEC.exec为bin文件校验头生成工具;。
+【4】sunxi-tools-烧录为load下载调用的sunxi-fel程序。
+【5】fload.exe为fload下载调用程序。
+【6】load.bat为使用sunxi-fel下载程序到FLASH的批处理文件。
+【7】fload.bat为使用fload下载器下载程序到FLASH的批处理文件。
+【8】load-dram.bat为使用sunxi-fel下载程序到DRAM的批处理文件【下载地址要与程序入口地址相对应】。
